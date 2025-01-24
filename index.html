@@ -23,76 +23,294 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Javascript -->
-    <script src="src/main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div>
-            <img src="images/favicon.ico" alt="logo"/>
-            <h1><a href="#">Tae</a></h1>
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__logo__img" src="images/favicon.ico" alt="logo"/>
+            <h1 class="header__logo__title"><a href="#">Tae</a></h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">My work</a></li>
-                <li><a href="#testimonial">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a class="header__menu__item active" href="#home">Home</a></li>
+                <li><a class="header__menu__item" href="#about">About</a></li>
+                <li><a class="header__menu__item" href="#skills">Skills</a></li>
+                <li><a class="header__menu__item" href="#work">My work</a></li>
+                <li><a class="header__menu__item" href="#testimonial">Testimonials</a></li>
+                <li><a class="header__menu__item" href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button class="header__toggle" aria-label="navigation menu toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
    </header>
    <!-- Main -->
    <main>
     <!-- Home -->
     <section id="home">
-        <img src="images/profile.png" alt="Tae's profile">
-        <h2>Hello I&#39;m Dream Coder, Tae</h2>
-        <p>A software engineer currently residing in Brisbane, Australia</p>
-        <a href="#contact">Contact me</a>
+      <div class="home__container">
+                <img class="home__avatar" src="images/profile.png" alt="Tae's profile">
+                <h2 class="home__title">Hello <br />I&#39;m <strong class="home__title--strong">Dream Coder</strong> , Tae</h2>
+                <p class="home__description">A software engineer currently residing in Brisbane, Australia</p>
+                <a class="home__contact" href="#contact">Contact me</a>
+      </div>
     </section>
     <!-- about -->
-    <section id="about">
-        <h2>About me</h2>
-        <p>Software engineering student who has learned and experienced in web development, 
+    <section id="about" class="section max-container">
+        <h2 class="title">About me</h2>
+        <p class="description">Software engineering student who has learned and experienced in web development, 
             app development, and server configuration. Experienced in working as a group effectively.
              Fluent in Korean and English with excellent communication and interpersonal skills and 
              high motivation. Excellent time management skills that can multitask. Experience in 
              working in a fast-paced environment. 
         </p>
-        <ul>
-            <li><i class="fa-brands fa-python"></i></li>
-            <li><i class="fa-brands fa-python"></i></li>
-            <li><i class="fa-brands fa-python"></i></li>
+        <ul class="majors">
+            <li class="major">
+                <i class="fa-solid fa-server major__icon"></i>
+                <p class="major__title">Back-end</p>
+                <p>Python, C++, Java, R</p>
+            </li>
+            <li class="major">
+                <i class="fa-brands fa-html5 major__icon"></i>
+                <p class="major__title">Front-end</p>
+                <p>HTML, CSS, Javascript</p>
+            </li>
+            <li class="major">
+                <i class="fa-brands fa-server major__icon"></i>
+                <p class="major__title">dfsasafds</p>
+                <p>fadsafds</p>
+            </li>
         </ul>
-        <ul>
-            <li>
-                <img src="" alt="">
+        <ul class="jobs">
+            <li class="job">
+                <img class="job__image" src="images/itpd logo.jpeg" alt="ITPD logo">
                 <div>
-                    <p>ITPD as Junior Data analyst</p>
-                    <p></p>
+                    <p class="job__name">ITPD as Junior Data analyst</p>
+                    <p class="job__period">Aug 2023 - Dec 2023</p>
                 </div>
             </li>
-            <li>
-                <img src="" alt="">
+            <li class="job">
+                <img class="job__image" src="images/UC logo.png " alt="UC logo">
                 <div>
-                    <p>ITPD as Junior Data analyst</p>
-                    <p></p>
+                    <p class="job__name">University of Canberra Bachelor of Software Engineering</p>
+                    <p class="job__period">Feb 2021 - Dec 2023 <br/>Overall GPA: 6.5/7.0</p>
                 </div>
             </li>
         </ul>
     </section>
     <!-- skills -->
-    <section id="skills"></section>
+    <section id="skills" class="section">
+        <div class="max-container">
+            <h2 class="title">My skills</h2>
+            <p class="description">Skills & Attributes</p>
+            <div class="skills">
+                <section class="skills__coding">
+                    <h3 class="skills__title">Coding skills</h3>
+                    <ul>
+                        <li class="bar">
+                          <div class="bar__metadata">
+                            <span>HTML</span><span>98%</span>
+                        </div>
+                          <div class="bar__bg">
+                            <div class="bar__value" style="width: 98%"></div>
+                        </div>
+                        </li>
+                        <li class="bar">
+                          <div class="bar__metadata">
+                            <span>CSS</span><span>90%</span>
+                        </div>
+                          <div class="bar__bg">
+                            <div class="bar__value" style="width: 90%"></div>
+                        </div>
+                        </li>
+                        <li class="bar">
+                          <div class="bar__metadata">
+                            <span>JavaScript</span><span>90%</span>
+                        </div>
+                          <div class="bar__bg">
+                            <div class="bar__value" style="width: 90%"></div>
+                        </div>
+                        </li>
+                        <li class="bar">
+                          <div class="bar__metadata">
+                            <span>TypeScript</span><span>80%</span>
+                        </div>
+                          <div class="bar__bg">
+                            <div class="bar__value" style="width: 80%"></div>
+                        </div>
+                        </li>
+                        <li class="bar">
+                          <div class="bar__metadata">
+                            <span>React</span><span>79%</span>
+                        </div>
+                          <div class="bar__bg">
+                            <div class="bar__value" style="width: 79%"></div>
+                        </div>
+                        </li>
+                        <li class="bar">
+                          <div class="bar__metadata">
+                            <span>NodeJs</span><span>68%</span>
+                        </div>
+                          <div class="bar__bg">
+                            <div class="bar__value" style="width: 68%"></div>
+                        </div>
+                        </li>
+                      </ul>
+                </section>
+                <section class="skills__tools">
+                    <h3 class="skills__title">Tools</h3>
+                    <ul>
+                        <li>Android Studio Code</li>
+                        <li>Visual Studio Code</li>
+                        <li>R studio</li>
+                        <li>Tableau</li>
+                    </ul>
+                </section>
+                <section class="skills__etc">
+                    <h3 class="skills__title">Etc</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
     <!-- work -->
-    <section id="work"></section>
+    <section id="work" class="section">
+        <div class="max-container">
+            <h2 class="title">My work</h2>
+            <p class="description">Projects</p>
+            <ul class="categories">
+                <li>
+                    <button class="category category--selected" data-category="All">All <span class="category__count">8</span></button>
+                </li>
+                <li>
+                    <button class="category" data-category="Front-end">Front-end <span class="category__count">3</span></button>
+                </li>
+                <li>
+                    <button class="category" data-category="Back-end">Back-end <span class="category__count">3</span></button>
+                </li>
+                <li>
+                    <button class="category" data-category="Data Dashboard">Data Dashboard <span class="category__count">1</span></button>
+                </li>
+            </ul>
+            <ul class="projects">
+                <li class="project" data-type="Front-end">
+                  <a href="#" target="_blank">
+                    <img src="images/itpd logo.jpeg" alt="project1" class="project__img" />
+                    <div class="project__metadata">
+                      <h3 class="project__title">Project #1</h3>
+                      <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="project" data-type="Back-end">
+                  <a href="#" target="_blank">
+                    <img src="images/itpd logo.jpeg" alt="project2" class="project__img" />
+                    <div class="project__metadata">
+                      <h3 class="project__title">Project #2</h3>
+                      <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="project" data-type="Back-end">
+                  <a href="#" target="_blank">
+                    <img src="images/itpd logo.jpeg" alt="project3" class="project__img" />
+                    <div class="project__metadata">
+                      <h3 class="project__title">Project #3</h3>
+                      <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="project" data-type="Data Dashboard">
+                  <a href="#" target="_blank">
+                    <img src="images/itpd logo.jpeg" alt="project4" class="project__img" />
+                    <div class="project__metadata">
+                      <h3 class="project__title">Project #4</h3>
+                      <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+        </div>
+    </section>
     <!-- testimonials -->
-    <section id="testimonial"></section>
+    <section id="testimonial" class="section max-container">
+        <h2 class="title">Testimonial</h2>
+        <p class="description">See what they say about me</p>
+        <ul class="testimonials">
+          <li class="testimonial">
+            <img src="images/itpd logo.jpeg" alt="people1" class="testimonial__img"/>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ad
+                iusto, ea alias, at sit libero laboriosam eaque eum, reiciendis
+                obcaecati vitae non reprehenderit beatae officiis. Dolore
+                corporis eveniet labore.
+              </p>
+              <p><a href="#" class="testimonial__bubble__name">James Kim</a> /Google</p>
+            </div>
+          </li>
+          <li class="testimonial">
+            <img src="images/testimonials/people2.webp" alt="people2" class="testimonial__img"/>
+            <div>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
+                adipisci quibusdam perspiciatis neque consequuntur nostrum
+                quisquam dolore consequatur voluptatum animi laborum, sequi
+                ipsum rerum voluptatibus sit ab similique quos velit?
+              </p>
+              <p><a href="#" class="testimonial__bubble__name">Anna Jin</a> /Samsung</p>
+            </div>
+          </li>
+          <li class="testimonial">
+            <img src="images/testimonials/people3.webp" alt="people3" class="testimonial__img"/>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, mollitia. Fugiat recusandae unde ducimus harum
+                voluptas earum reiciendis expedita inventore quas ab eum
+                dignissimos, maiores deleniti officiis qui, repudiandae
+                voluptatibus?
+              </p>
+              <p><a href="#" class="testimonial__bubble__name">Anna Jin</a> /Samsung</p>
+            </div>
+          </li>
+        </ul>
+    </section>
     <!-- arrow up -->
-    <aside></aside>
+    <aside>
+        <a class="arrow-up" href="#home" title="back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+    </aside>
    </main>
    <!-- Footer -->
-   <footer id="contact"></footer>
+   <footer id="contact" class="section">
+    <div class="max-container">
+          <h2 class="title">Let&#39;s talk</h2>
+          <p class="description">taeseok.lee.99@gmail.com</p>
+          <ul class="contact__links">
+            <li>
+              <a class="contact__link" href="https://github.com/tae920" target="_blank" title="my github link">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a class="contact__link" href="https://www.linkedin.com/in/taeseoklee/" target="_blank" title="my linkedin link">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <p>ⓒTaeLee - All rights reserved</p>
+    </div>
+   </footer>
 </body>
 </html>
