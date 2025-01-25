@@ -12,20 +12,24 @@
     <!-- OG (Open Graph Data) -->
     <meta property="og:title" content="Tae's portfolio"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content=""/>
-    <meta property="og:image" content=""/>
+    <meta property="og:url" content="https://tae920.github.io/portfolio/"/>
+    <meta property="og:image" content="https://tae920.github.io/portfolio/images/og.webp"/>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/7c8814318e.js" crossorigin="anonymous"></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Javascript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
+
 
 </head>
 <body>
@@ -55,16 +59,15 @@
     <section id="home">
       <div class="home__container">
                 <img class="home__avatar" src="images/profile.png" alt="Tae's profile">
-                <h2 class="home__title">Hello <br />I&#39;m <strong class="home__title--strong">Dream Coder</strong> , Tae</h2>
-                <p class="home__description">A software engineer currently residing in Brisbane, Australia</p>
+                <h2 class="home__title" aria-label="Hello, I'm Software Engineer, Tae">Hello <br />I&#39;m <strong class="home__title--strong">Software Engineer</strong> , Tae</h2>
+                <p class="home__description">A Software engineer/Data analyst currently residing in Brisbane, Australia</p>
                 <a class="home__contact" href="#contact">Contact me</a>
       </div>
     </section>
     <!-- about -->
     <section id="about" class="section max-container">
         <h2 class="title">About me</h2>
-        <p class="description">Software engineering student who has learned and experienced in web development, 
-            app development, and server configuration. Experienced in working as a group effectively.
+        <p class="description">Software engineering student who has learned and experienced in web development, app development, and server configuration. Also dealing with big data, analyze and visualizing it. Experienced in working as a group effectively.
              Fluent in Korean and English with excellent communication and interpersonal skills and 
              high motivation. Excellent time management skills that can multitask. Experience in 
              working in a fast-paced environment. 
@@ -73,7 +76,7 @@
             <li class="major">
                 <i class="fa-solid fa-server major__icon"></i>
                 <p class="major__title">Back-end</p>
-                <p>Python, C++, Java, R</p>
+                <p>Python, C++, R</p>
             </li>
             <li class="major">
                 <i class="fa-brands fa-html5 major__icon"></i>
@@ -81,9 +84,9 @@
                 <p>HTML, CSS, Javascript</p>
             </li>
             <li class="major">
-                <i class="fa-brands fa-server major__icon"></i>
-                <p class="major__title">dfsasafds</p>
-                <p>fadsafds</p>
+                <i class="fa-solid fa-database major__icon"></i>
+                <p class="major__title">Data analysis</p>
+                <p>R, Tableau</p>
             </li>
         </ul>
         <ul class="jobs">
@@ -198,7 +201,7 @@
                     <button class="category" data-category="Back-end">Back-end <span class="category__count">3</span></button>
                 </li>
                 <li>
-                    <button class="category" data-category="Data Dashboard">Data Dashboard <span class="category__count">1</span></button>
+                    <button class="category" data-category="Data Dashboard">Data analysis <span class="category__count">1</span></button>
                 </li>
             </ul>
             <ul class="projects">
