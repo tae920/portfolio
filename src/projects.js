@@ -21,7 +21,8 @@ function handleActiveSelection(target) {
 
 function filterProjects(filter) {
   projects.forEach((project) => {
-    if (filter === 'All' || filter === project.dataset.type) {
+    const types = project.dataset.type.split(',').map(type => type.trim());
+    if (filter === 'All' || types.includes(filter)) {
       project.style.display = 'block';
     } else {
       project.style.display = 'none';
